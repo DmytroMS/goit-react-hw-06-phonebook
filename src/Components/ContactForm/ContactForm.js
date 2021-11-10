@@ -2,14 +2,19 @@
 import { useState } from 'react';
 import shortid from 'shortid';
 import f from './Contacts.module.css';
+import { addContact } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
 
 
-export default function InputForm({addContactOnSubmit}) {
+export default function InputForm({onSubmit}) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
  const nameInputId = shortid.generate();
- const numberInputId = shortid.generate();
+  const numberInputId = shortid.generate();
+  
+  const dispatch = useDispatch();
+  // const onSubmit = () => dispatch(addContact({ name, number }));
 
   const handleInputChange = e => {
     const { name, value } = e.currentTarget;
@@ -27,7 +32,12 @@ export default function InputForm({addContactOnSubmit}) {
 
  const handleSubmit = e => {
         e.preventDefault();
-        addContactOnSubmit(name, number)
+   const addContactOnSubmit = {
+     name,
+     number,
+     id: shortid.generate(),
+   }
+   dispatch(addContact(addContactOnSubmit));
     setName('');
     setNumber('');
 

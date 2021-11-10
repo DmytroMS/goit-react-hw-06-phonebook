@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://DmytroMS.github.io/goit-react-hw-04-hooks-phonebook",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -11,7 +12,10 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
+    "redux-persist": "^6.0.0",
     "shortid": "^2.2.16",
     "web-vitals": "^1.1.2"
   },
@@ -19,7 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-     "predeploy": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
@@ -43,6 +47,7 @@
   },
   "devDependencies": {
     "eslint": "^7.32.0",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "redux-devtools-extension": "^2.13.9"
   }
 }
