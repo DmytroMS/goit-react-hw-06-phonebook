@@ -1,5 +1,5 @@
 import shortid from "shortid";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import f from './Filter.module.css';
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -25,7 +25,7 @@ export default function Filter() {
     );
 };
 
-Filter.propTypes = {
-    value: PropTypes.string,
-    onchange: PropTypes.func,
-}
+// Filter.propTypes = {
+//     value: PropTypes.string,
+//     onchange: PropTypes.func,
+// }
